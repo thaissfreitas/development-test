@@ -63,6 +63,14 @@
 		-webkit-box-shadow: 0 0 8px #D0D0D0;
 	}
 	</style>
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="<? echo base_url('includes/bootstrap/css/bootstrap.min.css') ?>">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="<? echo base_url('includes/bootstrap/js/bootstrap.min.js') ?>"></script>
 </head>
 <body>
 
