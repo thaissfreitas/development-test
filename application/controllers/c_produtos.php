@@ -11,7 +11,6 @@ class C_produtos extends CI_Controller {
 	}
         
         
-        
         public function create()                
 	{
        
@@ -33,7 +32,7 @@ class C_produtos extends CI_Controller {
           
             $this->db->insert('produtos', $data);
             $idProduto = mysql_insert_id();
-            redirect("http://localhost/development-test/index.php/c_produtos");	
+            redirect(base_url(c_produtos));	
         }
         
          public function editProduto(){

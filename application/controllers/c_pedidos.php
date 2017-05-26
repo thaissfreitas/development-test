@@ -26,7 +26,7 @@ class C_pedidos extends CI_Controller {
             $this->db->limit($limit);
             $dados = $this->db->get("produtos");
             
-            $data['dataHora'] = date("Y-m-d H:i:s");
+            $data['dataHora'] = date("Y-m-d H:i:s");  
             $this->db->insert('pedido', $data);
             $idPedido = mysql_insert_id();
             
@@ -54,6 +54,6 @@ class C_pedidos extends CI_Controller {
             $this->db->where('idPedido', $idPedido);
             $this->db->update('pedido', $updatePedido);
             
-            redirect("http://localhost/development-test/index.php/c_pedidos");	
+            redirect(base_url('c_pedidos'));	
         }
 }

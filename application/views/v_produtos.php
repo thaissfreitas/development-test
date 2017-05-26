@@ -50,42 +50,42 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li class="active"><a href="#">Produtos</a></li>
-              <li><a href="http://localhost/development-test/index.php/c_produtos/create" >Cadastrar Produtos</a></li>
-              <li><a  href="http://localhost/development-test/index.php/c_pedidos/" >Pedidos</a></li>
-              <li><a  href="http://localhost/development-test/index.php/c_pedidos/create" >Gerar Pedidos</a></li>
+              <li><a href ="<?php echo base_url();?>c_produtos/create" >Cadastrar Produtos</a></li>
+              <li><a  href="<?php echo base_url();?>c_pedidos/" >Pedidos</a></li>
+              <li><a  href="<?php echo base_url();?>c_pedidos/create" >Gerar Pedidos</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </nav>
 
-		<div class="panel panel-primary">
-		  <div class="panel-heading">
-		    <h3 class="panel-title">PRODUTOS CADASTRADOS</h3>
-		  </div>
-		  <div class="panel-body">
-		    <table class="table">
-		    	<tr>
-		    		<th>Descrição</th>
-		    		<th>Preço</th>
-              		    	<th>Estoque</th>
-                                <th>Ações</th>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">PRODUTOS CADASTRADOS</h3>
+          </div>
+          <div class="panel-body">
+            <table class="table">
+                <tr>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th>Estoque</th>
+                    <th>Ações</th>
 
-		    	</tr>
-		    	<?php foreach ($produtos -> result() as $produto): ?>
-                                <tr>
-                                        <td><?php echo $produto->descricao; ?></td>
-                                        <td><?php echo number_format($produto->preco, 2, ',', '.'); ?></td>
-                                        <td><?php echo $produto->quantEstoque; ?></td>
-                                        
-                                        <td> 
-                                            <a href="http://localhost/development-test/index.php/c_produtos/edit/<?php echo $produto->idProduto ?>">
-                                                Editar
-                                            </a>
-                                        </td>
-                                </tr>
-                        <?php endforeach; ?>
-		  </div>
-		</div>		
+                </tr>
+                <?php foreach ($produtos -> result() as $produto): ?>
+                    <tr>
+                        <td><?php echo $produto->descricao; ?></td>
+                        <td><?php echo number_format($produto->preco, 2, ',', '.'); ?></td>
+                        <td><?php echo $produto->quantEstoque; ?></td>
+
+                        <td> 
+                            <a href="<?php echo base_url();?>c_produtos/edit/<?php echo $produto->idProduto ?>">
+                                Editar
+                            </a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+          </div>
+        </div>		
       
     </div><!-- /.container -->
   </body>

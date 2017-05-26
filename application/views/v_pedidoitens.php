@@ -49,39 +49,39 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-               <li><a href="http://localhost/development-test/index.php/">Produtos</a></li>
-              <li><a href="http://localhost/development-test/index.php/c_produtos/create" >Cadastrar Produtos</a></li>
-              <li class="active"><a  href="http://localhost/development-test/index.php/c_pedidos/" >Pedidos</a></li>
-              <li><a  href="http://localhost/development-test/index.php/c_pedidos/create" >Gerar Pedidos</a></li>
+               <li><a href="<?php echo base_url();?>">Produtos</a></li>
+              <li><a href="<?php echo base_url();?>c_produtos/create" >Cadastrar Produtos</a></li>
+              <li class="active"><a  href="<?php echo base_url();?>c_pedidos/" >Pedidos</a></li>
+              <li><a  href="<?php echo base_url();?>c_pedidos/create" >Gerar Pedidos</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </nav>
 
-		<div class="panel panel-primary">
-		  <div class="panel-heading">
-		    <h3 class="panel-title">ITENS DO PEDIDO</h3>
-		  </div>
-		  <div class="panel-body">
-		    <table class="table">
-		    	<tr>
-		    		<th>ID</th>
-		    		<th>ID Pedido</th>
-              		    	<th>idProduto</th>
-                                <th>Valor</th>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">ITENS DO PEDIDO</h3>
+          </div>
+          <div class="panel-body">
+            <table class="table">
+                <tr>
+                        <th>ID</th>
+                        <th>ID Pedido</th>
+                        <th>idProduto</th>
+                        <th>Valor</th>
 
-		    	</tr>
-		    	<?php foreach ($itens -> result() as $itens): ?>
-                                <tr>
-                                        <td><?php echo $itens->idPedidoItens; ?></td>
-                                        <td><?php echo $itens->idPedido; ?></td>
-                                        <td><?php echo $itens->descricao; ?></td>
-                                        <td><?php echo number_format($itens->valor, 2, ',', '.'); ?></td>
-                              
-                                </tr>
-                        <?php endforeach; ?>
-		  </div>
-		</div>		
+                </tr>
+                <?php foreach ($itens -> result() as $itens): ?>
+                        <tr>
+                                <td><?php echo $itens->idPedidoItens; ?></td>
+                                <td><?php echo $itens->idPedido; ?></td>
+                                <td><?php echo $itens->descricao; ?></td>
+                                <td><?php echo number_format($itens->valor, 2, ',', '.'); ?></td>
+
+                        </tr>
+                <?php endforeach; ?>
+          </div>
+        </div>		
       
     </div><!-- /.container -->
   </body>

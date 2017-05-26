@@ -12,7 +12,7 @@
     <!-- Bootstrap core CSS -->
     <link href="http://localhost/development-test/includes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="<?= base_url('includes/bootstrap/js/bootstrap.min.js') ?>"></script>
     <script src="<?= base_url('includes/js/jquery.forms/jquery.forms.js') ?>"></script>
 
@@ -49,10 +49,10 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-               <li><a href="http://localhost/development-test/index.php/">Produtos</a></li>
-              <li><a href="http://localhost/development-test/index.php/c_produtos/create" >Cadastrar Produtos</a></li>
-              <li class="active"><a  href="http://localhost/development-test/index.php/c_pedidos/" >Pedidos</a></li>
-              <li><a  href="http://localhost/development-test/index.php/c_pedidos/create" >Gerar Pedidos</a></li>
+              <li><a href="<?php echo base_url();?>">Produtos</a></li>
+              <li><a href ="<?php echo base_url();?>c_produtos/create" >Cadastrar Produtos</a></li>
+              <li class="active"><a  href="<?php echo base_url();?>c_pedidos/" >Pedidos</a></li>
+              <li><a  href="<?php echo base_url();?>c_pedidos/create" >Gerar Pedidos</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
@@ -76,7 +76,7 @@
                                         <td><?php echo $pedido->idPedido; ?></td>
                                         <td><?php echo date("d/m/Y H:i:s", strtotime($pedido->dataHora));?></td>
                                         <td><?php echo number_format($pedido->valorTotalPedido, 2, ',', '.'); ?></td>
-                                        <td><a  data-toggle="modal" href="http://localhost/development-test/index.php/c_pedidos/itens/<?php echo $pedido->idPedido; ?>">
+                                        <td><a href="<?php echo base_url();?>c_pedidos/itens/<?php echo $pedido->idPedido; ?>">
                                            Itens
                                              </a>      
                                         </td>                         

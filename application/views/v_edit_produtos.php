@@ -12,7 +12,7 @@
     <!-- Bootstrap core CSS -->
     <link href="http://localhost/development-test/includes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="<?= base_url('../includes/bootstrap/js/bootstrap.min.js') ?>"></script>
     <script src="<?= base_url('../includes/js/jquery.forms/jquery.forms.js') ?>"></script>
 
@@ -49,10 +49,10 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li  class="active"><a href="http://localhost/development-test/index.php/">Produtos</a></li>
-              <li><a href="http://localhost/development-test/index.php/c_produtos/create" >Cadastrar Produtos</a></li>
-              <li><a  href="http://localhost/development-test/index.php/c_pedidos/" >Pedidos</a></li>
-              <li><a  href="http://localhost/development-test/index.php/c_pedidos/create" >Gerar Pedidos</a></li>
+              <li class="active"><a href="<?php echo base_url();?>">Produtos</a></li>
+              <li><a href ="<?php echo base_url();?>c_produtos/create" >Cadastrar Produtos</a></li>
+              <li><a  href="<?php echo base_url();?>c_pedidos/" >Pedidos</a></li>
+              <li><a  href="<?php echo base_url();?>c_pedidos/create" >Gerar Pedidos</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
@@ -66,7 +66,7 @@
             </div>
             <div class="panel-body">
             <?php foreach ($produtos -> result() as $produto): ?>
-             <form role="form" method="post" action="http://localhost/development-test/index.php/c_produtos/editProduto/" id="formulario_produto">
+             <form role="form" method="post" action="<?php echo base_url();?>c_produtos/editProduto/" id="formulario_produto">
                 <div class="form-group">
                   <label for="nome">Descrição</label>
                   <input type="text" class="form-control" id="descricao" name="descricao" value="<?php echo $produto->descricao; ?>">
